@@ -4,9 +4,15 @@ import './index.css';
 
 
 function Square(props) {
+  const style = { 
+    color: (props.value === 'X') ? "magenta" : "green",
+  };
+
   return (
     <button className="square" onClick={props.onClick}>
-      {props.value}
+      <span style={style}>
+        {props.value}
+      </span>
     </button>
   );
 }
